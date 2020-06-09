@@ -1,7 +1,7 @@
 package com.example.nawabClubSearch.controller;
 
 
-import com.example.nawabClubSearch.DTO.Club;
+import com.example.nawabClubSearch.dto.Club;
 import com.example.nawabClubSearch.Dao.ClubRepository;
 import com.example.nawabClubSearch.converter.ConvertCSVtoJsonMain;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +57,21 @@ public class NawabClubSearchController {
     @Transactional
     @PostMapping(path="/addEmployee",produces = "application/json",consumes = "application/json")
     public String addEmployee(@RequestBody Club club){
+
+        //Optional emp = employeeRepository.findById(1L);
+        clubRepository.saveAndFlush(club);
+        //System.out.println(employee.getFirstName());
+        //employeeRepository.flush();
+
+
+        //logger.info("Employee id 2 -> {}", emp.get());
+        return "done";
+
+    }
+
+    @Transactional
+    @PostMapping(path="/addClubs",produces = "application/json",consumes = "application/json")
+    public String addClub(@RequestBody Club club){
 
         //Optional emp = employeeRepository.findById(1L);
         clubRepository.saveAndFlush(club);

@@ -1,6 +1,6 @@
 package com.example.nawabClubSearch.Dao;
 
-import com.example.nawabClubSearch.DTO.Club;
+import com.example.nawabClubSearch.dto.Club;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
