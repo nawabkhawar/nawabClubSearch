@@ -57,9 +57,9 @@ public class Club {
     @JsonProperty("Clubphone")
     private String clubphone;
     @JsonProperty("Clubday_o")
-    private String clubdayO;
+    private String clubday_o;
     @JsonProperty("Clubtime_o")
-    private String clubtimeO;
+    private String clubtime_o;
     @JsonProperty("Clubday")
     private String clubday;
     @JsonProperty("Clubtime")
@@ -82,8 +82,8 @@ public class Club {
     private String clubemail;
     @JsonProperty("Clubadvanced")
     private String clubadvanced;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    /*@JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();*/
 
     @JsonProperty("District")
     public String getDistrict() {
@@ -227,22 +227,22 @@ public class Club {
 
     @JsonProperty("Clubday_o")
     public String getClubdayO() {
-        return clubdayO;
+        return clubday_o;
     }
 
     @JsonProperty("Clubday_o")
     public void setClubdayO(String clubdayO) {
-        this.clubdayO = clubdayO;
+        this.clubday_o = clubdayO;
     }
 
     @JsonProperty("Clubtime_o")
     public String getClubtimeO() {
-        return clubtimeO;
+        return clubtime_o;
     }
 
     @JsonProperty("Clubtime_o")
     public void setClubtimeO(String clubtimeO) {
-        this.clubtimeO = clubtimeO;
+        this.clubtime_o = clubtimeO;
     }
 
     @JsonProperty("Clubday")
@@ -355,15 +355,15 @@ public class Club {
         this.clubadvanced = clubadvanced;
     }
 
-    @JsonAnyGetter
+    /*@JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
-    }
+    }*/
 
-    @JsonAnySetter
+    /*@JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
-    }
+    }*/
 
 
 }
