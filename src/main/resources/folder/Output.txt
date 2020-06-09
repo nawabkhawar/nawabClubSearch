@@ -3298,7 +3298,7 @@
   "Clubopen" : "E",
   "Cluburl1" : "minfytoastmasters.wix.com/minfytm",
   "Cluburl2" : "www.facebook.com/minfytm",
-  "Clubwebstat1" : "Invalid--SSL",
+  "Clubwebstat1" : "Wix.com Website Builder",
   "Clubwebstat2" : "Facebook",
   "Clubemail" : "imanubhavghosh@gmail.com",
   "Clubadvanced" : ""
@@ -5045,7 +5045,7 @@
   "Club" : "5016997",
   "Clubname" : "IFIM Toastmasters Club",
   "Clubest" : "2015-10-01",
-  "Clubstatus" : "Ineligible",
+  "Clubstatus" : "Low",
   "Clubaddr1" : "IFIM Business School Room - Benoy Basu, 1st Floor, New Building",
   "Clubaddr2" : "IFIM B-School KIADB Industrial Area",
   "Clubcity" : "Bangalore",
