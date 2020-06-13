@@ -34,6 +34,8 @@ public class Club {
     private String division;
     @JsonProperty("Area")
     private String area;
+
+    @Column(unique = true)
     @JsonProperty("Club")
     private String club;
     @JsonProperty("Clubname")
@@ -84,6 +86,14 @@ public class Club {
     private String clubadvanced;
     /*@JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();*/
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     @JsonProperty("District")
     public String getDistrict() {

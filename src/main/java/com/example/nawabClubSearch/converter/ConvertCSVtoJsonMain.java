@@ -1,5 +1,6 @@
 package com.example.nawabClubSearch.converter;
 
+import com.example.nawabClubSearch.dto.Club;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
@@ -18,7 +19,7 @@ import static java.util.Arrays.asList;
 @Configuration
 public class ConvertCSVtoJsonMain {
 
-    private static final String CSVURL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv";
+    //private static final String CSVURL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv";
 
     /*public static void main(String[] args) throws Exception {
         ConvertCSVtoJsonMain convertCSVtoJson = new ConvertCSVtoJsonMain();
@@ -62,46 +63,18 @@ public class ConvertCSVtoJsonMain {
 
 
 
-    public Object convertCSVToJson(String csvURL) throws Exception {
-
+    public List<Club> convertCSVToJson(String csvURL) throws Exception {
         ConvertCSVtoJsonMain convertCSVtoJson = new ConvertCSVtoJsonMain();
-        //https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv
-        File file = new File("/Users/nawab-mac/Documents/mac backup/workspace/nawabClubSearch1/src/main/resources/folder/Test.csv");
-
+        File file = new File("Test.csv");
         FileUtils.copyURLToFile(new URL(csvURL), file);
-
-        System.out.println(file);
-
-            /*ConvertCSVtoJson convertCSVtoJson = new ConvertCSVtoJson();
-            File input = new File(convertCSVtoJson.getClass().getClassLoader().getResource("Test.csv").getFile());*/
-
         CsvSchema csvSchema = CsvSchema.builder().setUseHeader(true).build();
-
         CsvMapper csvMapper = new CsvMapper();
 
         // Read data from CSV file
-        List<List<Object>> readAll = asList(csvMapper.readerFor(Map.class).with(csvSchema).readValues(file).readAll());
-
+        List<Club> readAll = (List<Club>)(Object)csvMapper.readerFor(Club.class).with(csvSchema).readValues(file).readAll();
         ObjectMapper mapper = new ObjectMapper();
-
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-        // Write JSON formated data to output.json file
-        Object finalRow = new Object();
-
-        for (Object row : readAll) {
-            for (int i =0; i<((ArrayList) row).size();i++) {
-                Map<String, String> map = (Map<String, String>) ((ArrayList) row).get(0);
-
-                String fileName = map.get("fileName");
-
-                finalRow = row;
-
-            }
-        }
-        File output = new File("/Users/nawab-mac/Documents/workspace/nawabClubSearch/src/main/resources/folder/Output.txt");
-        mapper.writerWithDefaultPrettyPrinter().writeValue(output, finalRow);
-        return finalRow;
+        return readAll;
     }
 
         private File getFileFromResources(String fileName) {

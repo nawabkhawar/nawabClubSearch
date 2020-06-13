@@ -37,71 +37,60 @@ public class NawabClubSearchController {
         return convertCSVToJson.convertCSVToJson(csvURL);
     }
 
-    @GetMapping(path="/refreshClubs",produces = "application/json")
+    @PostMapping (path="/refreshClubs",produces = "application/json")
     public Object refreshClubs() throws Exception {
+       // List<Club> clubs = new ArrayList<Club>();
         LOGGER.info("came to getAllClubs");
         String csvURL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv";
-        return convertCSVToJson.convertCSVToJson(csvURL);
+          List<Club> clubs = convertCSVToJson.convertCSVToJson(csvURL);
+              if(null!=clubs && !clubs.isEmpty())
+              saveClubs(clubs);
+         return "done";
     }
 
-    /*@GetMapping(path="/getAllEmployee",produces = "application/json")
-    public List<Club> getAllEmployee(){
-
-        List<Club> emp = clubRepository.findAll();
-
-        //logger.info("Employee id 2 -> {}", emp.get());
-        return emp;
-
-    }*/
-
-   /* @Transactional
-    @PostMapping(path="/addEmployee",produces = "application/json",consumes = "application/json")
-    public String addEmployee(@RequestBody Club club){
-
-        //Optional emp = employeeRepository.findById(1L);
-        clubRepository.saveAndFlush(club);
-        //System.out.println(employee.getFirstName());
-        //employeeRepository.flush();
-
-
-        //logger.info("Employee id 2 -> {}", emp.get());
-        return "done";
-
-    }*/
-
-    /*@Transactional
+    @Transactional
     @PostMapping(path="/addClub",produces = "application/json",consumes = "application/json")
     public String addClub(@RequestBody Club club){
-
-        //Optional emp = employeeRepository.findById(1L);
-        clubRepository.saveAndFlush(club);
-        //System.out.println(employee.getFirstName());
-        //employeeRepository.flush();
-
-
-        //logger.info("Employee id 2 -> {}", emp.get());
+        saveClub(club);
         return "done";
-
-    }*/
+    }
 
     @Transactional
     @PostMapping(path="/addClubs",produces = "application/json",consumes = "application/json")
     public String addClubs(@RequestBody List<Club> clubs){
-        //for(Club club : clubs)
-        //Optional emp = employeeRepository.findById(1L);
-        clubRepository.saveAll(clubs);
-        //System.out.println(employee.getFirstName());
-        //employeeRepository.flush();
-
-
-        //logger.info("Employee id 2 -> {}", emp.get());
+        saveClubs(clubs);
         return "done";
 
     }
 
-    /*public Optional getClub(){
-
+    /*@Transactional
+    @PostMapping(path="/addClubs",produces = "application/json",consumes = "application/text")
+    public String addClubs(@RequestBody String str){
+        saveClubs(clubs);
+        return "done";
 
     }*/
+
+    private void saveClubs(@RequestBody List<Club> clubs) {
+        if(null!=clubs && !clubs.isEmpty()) {
+            for (Club club : clubs) {
+                saveClub(club);
+            }
+        }
+        else{
+            LOGGER.info("saveClubs : clubs was null" );
+        }
+    }
+
+    private void saveClub(Club club){
+        List<Club> clubs= clubRepository.findByClub(club.getClub());
+        if(null!=clubs && !clubs.isEmpty()){
+            club.setId(clubs.get(0).getId());
+        }
+        else{
+            LOGGER.info("club was null : clubs was null" );
+        }
+        clubRepository.save(club);
+    }
 
 }
