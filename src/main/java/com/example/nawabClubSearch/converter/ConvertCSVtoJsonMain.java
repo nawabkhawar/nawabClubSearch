@@ -1,14 +1,18 @@
 package com.example.nawabClubSearch.converter;
 
+import com.example.nawabClubSearch.controller.NawabClubSearchController;
 import com.example.nawabClubSearch.dto.Club;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +22,9 @@ import static java.util.Arrays.asList;
 
 @Configuration
 public class ConvertCSVtoJsonMain {
+
+    private static final Logger LOGGER =
+            LoggerFactory.getLogger(ConvertCSVtoJsonMain.class);
 
     //private static final String CSVURL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv";
 
@@ -63,18 +70,31 @@ public class ConvertCSVtoJsonMain {
 
 
 
-    public List<Club> convertCSVToJson(String csvURL) throws Exception {
+    public List<Club> convertCSVToJson(String csvURL) {
         ConvertCSVtoJsonMain convertCSVtoJson = new ConvertCSVtoJsonMain();
-        File file = new File("Test.csv");
-        FileUtils.copyURLToFile(new URL(csvURL), file);
+        LOGGER.error("came to convert CSV");
+        try {
+            //File file = new File("Test.csv");
+            //LOGGER.error("created CSV");
+            //FileUtils.copyURLToFile(new URL(csvURL), file);
+
+
         CsvSchema csvSchema = CsvSchema.builder().setUseHeader(true).build();
         CsvMapper csvMapper = new CsvMapper();
 
         // Read data from CSV file
-        List<Club> readAll = (List<Club>)(Object)csvMapper.readerFor(Club.class).with(csvSchema).readValues(file).readAll();
+        List<Club> readAll = (List<Club>)(Object)csvMapper.readerFor(Club.class).with(csvSchema).readValues(new URL(csvURL)).readAll();
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         return readAll;
+        } catch (IOException e) {
+            LOGGER.error("exception while fetching csv from url" + e);
+        }
+        catch (Exception e) {
+            LOGGER.error("exception while creating Test.csv" + e);
+        }
+        LOGGER.error("returning null");
+        return null;
     }
 
         private File getFileFromResources(String fileName) {
