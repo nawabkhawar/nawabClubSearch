@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,6 +85,9 @@ public class Club {
     private String clubemail;
     @JsonProperty("Clubadvanced")
     private String clubadvanced;
+    @JsonProperty("updatedon")
+    private Date updatedon;
+
     /*@JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();*/
 

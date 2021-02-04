@@ -1,8 +1,7 @@
 package com.example.nawabClubSearch.Dao;
 
 import com.example.nawabClubSearch.dto.Club;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+import com.example.nawabClubSearch.dto.Event;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,17 +10,17 @@ import java.util.List;
 
 @Repository
 @Transactional
-public interface ClubRepository extends CrudRepository<Club,Long> {
+public interface EventRepository extends CrudRepository<Event,Long> {
 
     /*@Query("SELECT TOP 1 id FROM Club c where c.club = :clubId")
     public long getByClubId(String clubId);*/
 
-    public List<Club> findByClub(String clubId);
+    public List<Event> findByeventid(long eventId);
     //public Club getByClubId(int id);
-    public List<Club> findByDistrict(String districtId);
 
 
-    public List<Club> findAll();
+
+    public List<Event> findAll();
    /* public Employees getEmployee(){
 
     }*/

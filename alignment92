@@ -1,0 +1,992 @@
+[
+ {
+   "Club": "3517571",
+   "Division": "A",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "4184180",
+   "Division": "A",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6988591",
+   "Division": "A",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6997339",
+   "Division": "A",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "3803102",
+   "Division": "A",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "9713",
+   "Division": "A",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7232686",
+   "Division": "A",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6975731",
+   "Division": "A",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "5856861",
+   "Division": "A",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7738613",
+   "Division": "A",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "1430487",
+   "Division": "A",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7214621",
+   "Division": "A",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7414540",
+   "Division": "A",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "1523866",
+   "Division": "A",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7306349",
+   "Division": "A",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "1540185",
+   "Division": "A",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "3760698",
+   "Division": "A",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "9015",
+   "Division": "A",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7327648",
+   "Division": "A",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "4639994",
+   "Division": "A",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "863230",
+   "Division": "B",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "2102647",
+   "Division": "B",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "1254322",
+   "Division": "B",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "3078424",
+   "Division": "B",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7639443",
+   "Division": "B",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "5979279",
+   "Division": "B",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "5843268",
+   "Division": "B",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "4785827",
+   "Division": "B",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7747857",
+   "Division": "B",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7747874",
+   "Division": "B",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "2721508",
+   "Division": "B",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "848580",
+   "Division": "B",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "6090299",
+   "Division": "B",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "4403220",
+   "Division": "B",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7179851",
+   "Division": "B",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "9206",
+   "Division": "B",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7535313",
+   "Division": "B",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "3861066",
+   "Division": "B",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7751850",
+   "Division": "B",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "4830548",
+   "Division": "B",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "9496",
+   "Division": "B",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "2177847",
+   "Division": "B",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "5953681",
+   "Division": "C",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "4756608",
+   "Division": "C",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "1769687",
+   "Division": "C",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7661955",
+   "Division": "C",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6513267",
+   "Division": "C",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7019677",
+   "Division": "C",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6925924",
+   "Division": "C",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7661511",
+   "Division": "C",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7476590",
+   "Division": "C",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "1414813",
+   "Division": "C",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7430427",
+   "Division": "C",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7217731",
+   "Division": "C",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "4053211",
+   "Division": "C",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "5186089",
+   "Division": "C",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7677545",
+   "Division": "C",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "1766",
+   "Division": "C",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7357358",
+   "Division": "C",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7106846",
+   "Division": "C",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "5089624",
+   "Division": "C",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7776935",
+   "Division": "C",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "1572672",
+   "Division": "D",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "2490841",
+   "Division": "D",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "4703229",
+   "Division": "D",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "4716149",
+   "Division": "D",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "3103145",
+   "Division": "D",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7235902",
+   "Division": "D",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7596826",
+   "Division": "D",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7383237",
+   "Division": "D",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "4885652",
+   "Division": "D",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7767688",
+   "Division": "D",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "1548643",
+   "Division": "D",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "2158258",
+   "Division": "D",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7310596",
+   "Division": "D",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7656417",
+   "Division": "D",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7559732",
+   "Division": "D",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "2995796",
+   "Division": "D",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "4237436",
+   "Division": "D",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "4870166",
+   "Division": "D",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6678467",
+   "Division": "D",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6479898",
+   "Division": "D",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "1434790",
+   "Division": "E",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "4640268",
+   "Division": "E",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7023139",
+   "Division": "E",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6849306",
+   "Division": "E",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "1364680",
+   "Division": "E",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7079765",
+   "Division": "E",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "4391119",
+   "Division": "E",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "5359247",
+   "Division": "E",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6870155",
+   "Division": "E",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7625143",
+   "Division": "E",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "5163294",
+   "Division": "E",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "3977461",
+   "Division": "E",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "3653038",
+   "Division": "E",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "5404217",
+   "Division": "E",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "5947684",
+   "Division": "E",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7449044",
+   "Division": "E",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "3958529",
+   "Division": "E",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "948587",
+   "Division": "E",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "1134620",
+   "Division": "E",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7204968",
+   "Division": "E",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7170117",
+   "Division": "F",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6507031",
+   "Division": "F",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7073857",
+   "Division": "F",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "5929974",
+   "Division": "F",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6849298",
+   "Division": "F",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6621770",
+   "Division": "F",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "874671",
+   "Division": "F",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "5729476",
+   "Division": "F",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "3993875",
+   "Division": "F",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "1526641",
+   "Division": "F",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "4754691",
+   "Division": "F",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "5399085",
+   "Division": "F",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "6732826",
+   "Division": "F",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "6796925",
+   "Division": "F",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7648718",
+   "Division": "F",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7432265",
+   "Division": "F",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "2331661",
+   "Division": "F",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6786307",
+   "Division": "F",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6482362",
+   "Division": "F",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "4731608",
+   "Division": "F",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7682927",
+   "Division": "F",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7523372",
+   "Division": "G",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "4393223",
+   "Division": "G",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "1535535",
+   "Division": "G",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6488867",
+   "Division": "G",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "7751098",
+   "Division": "G",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "1384796",
+   "Division": "G",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7206692",
+   "Division": "G",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6885674",
+   "Division": "G",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7605190",
+   "Division": "G",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7498712",
+   "Division": "G",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6068796",
+   "Division": "G",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6511234",
+   "Division": "G",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7707522",
+   "Division": "G",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7431680",
+   "Division": "G",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7711154",
+   "Division": "G",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "4412996",
+   "Division": "G",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "2197304",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6097063",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "5055819",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6943592",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "5840831",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "6557425",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7160379",
+   "Division": "G",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7459390",
+   "Division": "H",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6601430",
+   "Division": "H",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "1378869",
+   "Division": "H",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "6768732",
+   "Division": "H",
+   "Area": "1",
+   "District": "92"
+ },
+ {
+   "Club": "5424705",
+   "Division": "H",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "1535558",
+   "Division": "H",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "2518988",
+   "Division": "H",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7739822",
+   "Division": "H",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "7700604",
+   "Division": "H",
+   "Area": "2",
+   "District": "92"
+ },
+ {
+   "Club": "6808086",
+   "Division": "H",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7535157",
+   "Division": "H",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7478636",
+   "Division": "H",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "2870184",
+   "Division": "H",
+   "Area": "3",
+   "District": "92"
+ },
+ {
+   "Club": "7422548",
+   "Division": "H",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "3572259",
+   "Division": "H",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "7711899",
+   "Division": "H",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "2379914",
+   "Division": "H",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "5100525",
+   "Division": "H",
+   "Area": "4",
+   "District": "92"
+ },
+ {
+   "Club": "3590181",
+   "Division": "H",
+   "Area": "4",
+   "District": "92"
+ }
+]
