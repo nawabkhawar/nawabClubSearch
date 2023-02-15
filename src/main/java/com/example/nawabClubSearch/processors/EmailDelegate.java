@@ -26,6 +26,7 @@ public class EmailDelegate {
         msg.setSubject(emailRequest.subject);
         msg.setText(emailRequest.text);
 
+
         javaMailSender.send(msg);
 
     }

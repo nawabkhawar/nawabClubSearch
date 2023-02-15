@@ -1,97 +1,100 @@
 package com.example.nawabClubSearch.dto;
 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class EmailRequest {
+import javax.persistence.*;
+import java.util.Date;
 
-    public String toAddress;
-    public String text;
-    public String subject;
+@Entity
+@Table(name="certgen")
+public class Cert {
 
-    //newparams
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private long id;
+
+    @JsonProperty("createdtime")
+    private Date createdtime;
+
+    @JsonProperty("clubname")
     private String clubname;
 
-
-
+    @JsonProperty("meetingnumber")
     private String meetingnumber;
 
-
+    @JsonProperty("clubnumber")
     private String clubnumber;
 
-
+    @JsonProperty("area")
     private String area;
 
-
+    @JsonProperty("division")
     private String division;
 
-
+    @JsonProperty("district")
     private String district;
 
-
+    @JsonProperty("date")
     private String date;
 
-
+    @JsonProperty("clubemail")
     private String clubemail;
 
-
+    @JsonProperty("award1")
     private String award1;
 
-
+    @JsonProperty("rec1")
     private String rec1;
 
-
+    @JsonProperty("award2")
     private String award2;
 
-
+    @JsonProperty("rec2")
     private String rec2;
 
-
+    @JsonProperty("award3")
     private String award3;
 
-
+    @JsonProperty("rec3")
     private String rec3;
 
-
+    @JsonProperty("award4")
     private String award4;
 
-
+    @JsonProperty("rec4")
     private String rec4;
 
-
+    @JsonProperty("award5")
     private String award5;
 
-
+    @JsonProperty("rec5")
     private String rec5;
 
-
+    @JsonProperty("award6")
     private String award6;
 
-
+    @JsonProperty("rec6")
     private String rec6;
 
+    @JsonProperty("emailtext")
+    private String emailtext;
 
-    public String getToAddress() {
-        return toAddress;
+    public long getId() {
+        return id;
     }
 
-    public void setToAddress(String toAddress) {
-        this.toAddress = toAddress;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getText() {
-        return text;
+    public Date getCreatedtime() {
+        return createdtime;
     }
 
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setCreatedtime(Date createdtime) {
+        this.createdtime = createdtime;
     }
 
     public String getClubname() {
@@ -252,5 +255,13 @@ public class EmailRequest {
 
     public void setRec6(String rec6) {
         this.rec6 = rec6;
+    }
+
+    public String getEmailtext() {
+        return emailtext;
+    }
+
+    public void setEmailtext(String emailtext) {
+        this.emailtext = emailtext;
     }
 }

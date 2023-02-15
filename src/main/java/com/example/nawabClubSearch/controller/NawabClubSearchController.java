@@ -1,21 +1,18 @@
 package com.example.nawabClubSearch.controller;
 
 
-import com.example.nawabClubSearch.Dao.ChiefJudgeRepository;
-import com.example.nawabClubSearch.Dao.EventRepository;
-import com.example.nawabClubSearch.Dao.JudgeRepository;
+import com.example.nawabClubSearch.Dao.*;
 import com.example.nawabClubSearch.dto.*;
-import com.example.nawabClubSearch.Dao.ClubRepository;
 import com.example.nawabClubSearch.converter.ConvertCSVtoJsonMain;
 import com.example.nawabClubSearch.processors.EmailDelegate;
 import com.example.nawabClubSearch.processors.HTTP;
 import com.example.nawabClubSearch.utils.Utils;
+import org.apache.catalina.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -23,10 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 @EnableSwagger2
@@ -41,6 +35,9 @@ public class NawabClubSearchController {
     ClubRepository clubRepository;
 
     @Autowired
+    CertRepository certRepository;
+
+    @Autowired
     JudgeRepository judgeRepository;
 
     @Autowired
@@ -48,6 +45,15 @@ public class NawabClubSearchController {
 
     @Autowired
     EventRepository eventRepository;
+
+    @Autowired
+    HighlightRepository highlightRepository;
+
+    @Autowired
+    BookRepository bookRepository;
+
+    @Autowired
+    HighlightUserRepository highlightUserRepository;
 
     @Autowired
     EmailDelegate emailDelegate;
@@ -69,7 +75,7 @@ public class NawabClubSearchController {
         String referer = request.getHeader("referer");
         LOGGER.error("referer:" + referer);
 
-        if(null!=referer && referer.contains("http://nawabkhawar.tech")) {
+        if(null!=referer && referer.contains("http://nawabkhawar.in")) {
             LOGGER.error("clubRepository get");
             List<Club> clubs = clubRepository.findAll();
             return ResponseEntity.ok().headers(headers).body(clubs);
@@ -96,7 +102,7 @@ public class NawabClubSearchController {
         String referer = request.getHeader("referer");
         LOGGER.error("referer:" + referer);
 
-        if(null!=referer && referer.contains("http://nawabkhawar.tech")) {
+        if(null!=referer && referer.contains("http://nawabkhawar.in")) {
             LOGGER.error("clubRepository get");
             List<Club> clubs = clubRepository.findByDistrict(districtId);
             return ResponseEntity.ok().headers(headers).body(clubs);
@@ -114,7 +120,7 @@ public class NawabClubSearchController {
         String referer = request.getHeader("referer");
         LOGGER.error("referer:" + referer);
         List<Club> clubs = clubRepository.findAll();
-        //if(null!=referer && referer.contains("http://nawabkhawar.tech")) {
+        //if(null!=referer && referer.contains("http://nawabkhawar.in")) {
 
         return ResponseEntity.ok().headers(headers).body(clubs);
         /*}
@@ -130,9 +136,7 @@ public class NawabClubSearchController {
         //export.cgi?FILE=csv/getclubs-D41_103.211.58.74.csv
         //getclubs-D92_103.211.58.74.csv
         //getclubs-D92_103.211.58.74.csv
-        String csvURL[] = {
-                Utils.csvUrl
-        };
+        String csvURL[] = Utils.csvUrl.split(";");
         for(int i=0;i<csvURL.length;i++) {
             List<Club> clubs = convertCSVToJson.convertCSVToJson(csvURL[i]);
             LOGGER.error("error: got clubs");
@@ -213,7 +217,7 @@ public class NawabClubSearchController {
 
     private void sendEmailForResultSubmission(Judge judge, ChiefJudge chiefJudge) {
         String msgForChiefJudge ="Just a confirmation\n" +
-                "1.You can go back to http://nawabkhawar.tech/chiefjudge.html?q=" + chiefJudge.getCjsecret() +
+                "1.You can go back to http://nawabkhawar.in/chiefjudge.html?q=" + chiefJudge.getCjsecret() +
                 " to get the results" +
                 "\n2.Or press LoadMoreResults button on the page to load more results";
 
@@ -331,7 +335,7 @@ public class NawabClubSearchController {
             eventTag += "Evaluation speech contest";
         }
         String msgForChieftJudge = "Hi " + chiefJudge.getName() + ", \n\nChief Judge's site is -" +
-                "http://nawabkhawar.tech/chiefjudge.html?q=" + chiefJudge.getCjsecret();
+                "http://nawabkhawar.in/chiefjudge.html?q=" + chiefJudge.getCjsecret();
         int count =0;
         String listmsg = "";
         for(Judge judge : judgesList){
@@ -368,17 +372,17 @@ public class NawabClubSearchController {
         if(eventType.equals("H")){
             eventTag += "Humorous speech contest";
             msgPart2    += chiefJudgeName + " selected you as a judge for event -" + eventName +
-                    ", \n judge site is -" + "http://nawabkhawar.tech/judge.html?q="+judge.getJsecret() ;
+                    ", \n judge site is -" + "http://nawabkhawar.in/judge.html?q="+judge.getJsecret() ;
         }
         else if(eventType.equals("E")){
             eventTag += "Evaluation speech contest";
             msgPart2    += chiefJudgeName + " selected you as a judge for event -" + eventName +
-                    ", \n judge site is -" + "http://nawabkhawar.tech/judge.html?q="+judge.getJsecret() ;
+                    ", \n judge site is -" + "http://nawabkhawar.in/judge.html?q="+judge.getJsecret() ;
         }
         else if(eventType.equals("EP")){
             eventTag += "Emparch Presentation Contest";
             msgPart2    += chiefJudgeName + " selected you as a judge for event -" + eventName +
-                    ", \n judge site is -" + "http://nawabkhawar.tech/judgeEmparch.html?q="+judge.getJsecret() ;
+                    ", \n judge site is -" + "http://nawabkhawar.in/judgeEmparch.html?q="+judge.getJsecret() ;
         }
 
         String msgToJudge = "Hi " + judge.getName() + ",\n\n ";
@@ -386,7 +390,7 @@ public class NawabClubSearchController {
 
 
         /*String msgPart2    = chiefJudgeName + " selected you as a judge for event -" + eventName +
-                ", \n judge site is -" + "http://nawabkhawar.tech/judge.html?q="+judge.getJsecret() ;*/
+                ", \n judge site is -" + "http://nawabkhawar.in/judge.html?q="+judge.getJsecret() ;*/
 
         String tieBreakerMsg = "\n\n you are the tiebreaking judge & you will have to mark all the contestants" ;
         String pleaseNote = "\n \n Please Note- \n" +
@@ -427,7 +431,7 @@ public class NawabClubSearchController {
         //String referer = request.getHeader("referer");
         //LOGGER.error("referer:" + referer);
 
-        //if(null!=referer && referer.contains("http://nawabkhawar.tech")) {
+        //if(null!=referer && referer.contains("http://nawabkhawar.in")) {
             LOGGER.error("clubRepository get");
             List<Judge> judges = judgeRepository.findByjsecret(judgeId);
             JudgeEvent judgeEvent = new JudgeEvent();
@@ -450,7 +454,7 @@ public class NawabClubSearchController {
         //String referer = request.getHeader("referer");
         //LOGGER.error("referer:" + referer);
 
-        //if(null!=referer && referer.contains("http://nawabkhawar.tech")) {
+        //if(null!=referer && referer.contains("http://nawabkhawar.in")) {
         LOGGER.error("clubRepository get");
         List<ChiefJudge> chiefJudges = chiefJudgeRepository.findBycjsecret(chiefJudgeid);
         JudgeEvent judgeEvent = new JudgeEvent();
@@ -668,7 +672,126 @@ public class NawabClubSearchController {
         LOGGER.trace("came to send email");
 
         emailDelegate.sendEmail(emailRequest);
+        Cert cert = new Utils().transformEmailReqToCert(emailRequest);
+        this.saveCert(cert);
+        LOGGER.error("Cert was inserted" );
+
         return "done";
+    }
+
+    @Transactional
+    @PostMapping(path="/saveCert",produces = "application/json",consumes = "application/json")
+    public void  saveCert(@RequestBody Cert cert){
+        cert.setCreatedtime(Calendar.getInstance(TimeZone.getTimeZone("IST")).getTime());
+        Date date = new Date();
+        date.setHours((new Date().getHours()+ 5));
+        date.setMinutes((date.getMinutes()+ 30));
+        cert.setCreatedtime(date);
+        LOGGER.error("Cert was inserted" );
+        certRepository.save(cert);
+        //return "certsaved";
+    }
+
+
+    @PostMapping(path="/saveHighlight",produces = "application/json",consumes = "application/json")
+    public String  saveHighlight(@RequestBody Highlight highlight){
+        highlight.setCreatedon(getTime());
+        LOGGER.error("highlight came to insert" );
+        highlightRepository.save(highlight);
+        LOGGER.error("highlight saved" );
+        return "highlight saved";
+    }
+
+
+    @PostMapping(path="/saveHighlightUser",produces = "application/json",consumes = "application/json")
+    public String  saveHighlightUser(@RequestBody HighlightUser highlightUser){
+        highlightUser.setCreatedon(getTime());
+        LOGGER.error("highlightUserRepository came to insert" );
+        highlightUserRepository.save(highlightUser);
+        LOGGER.error("inserted" );
+        return "usersaved";
+    }
+
+    @Transactional
+    @PostMapping(path="/saveBook",produces = "application/json",consumes = "application/json")
+    public String  saveBook(@RequestBody Book book){
+        LOGGER.error("came to insert book" );
+        bookRepository.save(book);
+        LOGGER.error("book inserted" );
+        return "booksaved";
+    }
+
+    public Date getTime(){
+        Date date = new Date();
+        date.setHours((new Date().getHours()+ 5));
+        date.setMinutes((date.getMinutes()+ 30));
+        return date;
+    }
+
+    @Transactional
+    @PostMapping(path="/getAllHighlights",produces = "application/json",consumes = "application/json")
+    public HighlightUsers getAllHighlights(@RequestBody HighlightUser user){
+        LOGGER.error("came to get all highlights for user" );
+        List<Highlight> highlights;
+        Optional<HighlightUser> searchedUser = highlightUserRepository.findById(user.getId());
+        HighlightUsers user1 = new HighlightUsers();
+        if(null!=searchedUser){
+            LOGGER.error("user found" );
+            HighlightUser foundUser = searchedUser.get();
+            user1.setUsername(foundUser.getName());
+            user1.setUseremail(foundUser.getEmail());
+            user1.setSendToEmail(foundUser.getContactemail());
+
+            List<Book> books = bookRepository.findByUserid(searchedUser.get().getId());
+            if(null!=books && !books.isEmpty() ){
+                int index=0;
+                for(Book book : books){
+                    List<Highlight> highlights1 = highlightRepository.findByBookid(book.getId());
+                    //books.get(index).setHighlight ist(highlights1);
+                    if(index==0){
+                        user1.setHighlightList(highlights1);
+                    }else {
+                        user1.getHighlightList().addAll(highlights1);
+                    }
+                    index++;
+                }
+                //searchedUser.get().setBookList(books);
+            }
+            return user1;
+        }
+
+
+        return null;
+    }
+
+    @Transactional
+    @PostMapping(path="/getBook",produces = "application/json",consumes = "application/json")
+    public Book getBook(@RequestBody Book book){
+        LOGGER.error("came to get all books for user" );
+        //List<Book> books;
+        Optional<Book> foundBook = bookRepository.findById(book.getId());
+        if(foundBook !=null  && null!=foundBook.get()){
+        Book book1 = foundBook.get();
+            return book1;
+        }
+
+    else return null;
+
+    }
+
+    @Transactional
+    @PostMapping(path="/getHighlightUser",produces = "application/json",consumes = "application/json")
+    public HighlightUser getHighlightUser(@RequestBody HighlightUser highlightUser){
+        LOGGER.error("came to get all books for user" );
+        //List<Book> books;
+        Optional<HighlightUser> userFound = highlightUserRepository.findById(highlightUser.getId());
+        if(userFound !=null  && null!=userFound.get()){
+            HighlightUser user1= userFound.get();
+            return user1;
+        }
+
+        else return null;
+
     }
 
 

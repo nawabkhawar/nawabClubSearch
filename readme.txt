@@ -248,3 +248,7 @@ public class EmailDelegate {
     }
 
 }
+
+1) We have 100 websites in network.
+2) For sake of simplicity lets assume, each website Only publishes news articles.
+3)Each page has only one news article. Each news article will have a title having the company's stock ticker code in the title.

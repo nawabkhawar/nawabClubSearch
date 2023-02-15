@@ -26,7 +26,8 @@ public class ConvertCSVtoJsonMain {
     private static final Logger LOGGER =
             LoggerFactory.getLogger(ConvertCSVtoJsonMain.class);
 
-    //private static final String CSVURL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv";
+    //private static final String CSVURL_ORIGINAL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/getclubs-D92_183.82.181.43.csv";
+    //private static final String CSVURL = "https://www.marshalls.org/tmtools/export.cgi?FILE=csv/directory-D92_152.58.210.35.csv"
 
     /*public static void main(String[] args) throws Exception {
         ConvertCSVtoJsonMain convertCSVtoJson = new ConvertCSVtoJsonMain();
